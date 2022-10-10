@@ -1,0 +1,12 @@
+.container-post{
+    display:  flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.main-post{
+
+}
+.main-post img{
+    width: 300px;
+    height: 300px;
+}
