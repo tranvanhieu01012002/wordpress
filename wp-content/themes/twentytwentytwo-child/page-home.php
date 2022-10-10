@@ -2,7 +2,16 @@
 get_header();
 ?>
 <main>
-    <?php
-    get_template_part('./display-post/main-post')
-    ?>
+    
+    <div class="container-post">
+        <?php
+        get_template_part('./display-post/main-post')
+        ?>
+        <?php
+        get_template_part('./display-post/center-post')
+        ?>
+        <?php
+        get_template_part('./display-post/main-post')
+        ?>
+    </div>
 </main>
