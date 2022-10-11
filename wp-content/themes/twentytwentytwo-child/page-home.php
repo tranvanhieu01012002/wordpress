@@ -11,7 +11,7 @@ get_header();
         get_template_part('./display-post/center-post')
         ?>
         <?php
-        get_template_part('./display-post/main-post')
+        get_template_part('./display-post/right-post')
         ?>
     </div>
 </main>

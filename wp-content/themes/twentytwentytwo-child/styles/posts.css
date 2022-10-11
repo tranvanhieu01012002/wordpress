@@ -10,3 +10,6 @@
     width: 300px;
     height: 300px;
 }
+.right-post{
+    display: flex;
+}

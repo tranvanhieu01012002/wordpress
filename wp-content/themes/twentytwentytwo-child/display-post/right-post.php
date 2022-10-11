@@ -8,9 +8,10 @@
     while ($the_query -> have_posts()) : $the_query -> the_post();
     // Display the Post Title with Hyperlink
     ?>
-        <br>
-        <?php show_image_thumbnail('large') ?>
-        <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+        <div style="display:flex" class="right-post">
+            <?php show_image_thumbnail('small') ?>
+            <a style="width:100px" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+        </div>
         <?php
     endwhile;
     wp_reset_postdata();

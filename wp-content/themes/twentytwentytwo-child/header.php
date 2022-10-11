@@ -44,7 +44,7 @@
                         </li>
                         <li class="current-time">
                             <?php
-                                echo get_day_of_week_VN(date('w')); echo " ". current_datetime()->format('d-m-Y');
+                                get_day_of_week_VN(date('w'))
                             ?>
                         </li>
                         <li class="socal-media">
