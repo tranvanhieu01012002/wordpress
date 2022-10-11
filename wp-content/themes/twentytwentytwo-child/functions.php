@@ -1,7 +1,8 @@
 <?php
 add_theme_support( 'post-thumbnails' );
-function get_day_of_week_VN($day)
+function get_day_of_week_VN()
 {
+    $day = date('w');
     $arr = require_once('wp-content\themes\twentytwentytwo-child\constant\day-of-week.php') ;
     switch ($day) {
         case 0:

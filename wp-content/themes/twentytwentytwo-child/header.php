@@ -44,7 +44,7 @@
                         </li>
                         <li class="current-time">
                             <?php
-                                get_day_of_week_VN(date('w'))
+                                get_day_of_week_VN();
                             ?>
                         </li>
                         <li class="socal-media">
