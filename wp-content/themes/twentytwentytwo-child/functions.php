@@ -32,4 +32,10 @@ if ( !function_exists('show_image_thumbnail') ) {
     <?php endif;
 }
 }
+
+function readmore()
+{
+  return '…<a class="read-more" href="' . get_permalink(get_the_ID()) . '">' . __('Read More', 'congbio') . '</a>';
+}
+add_filter('excerpt_more', 'readmore');
 ?>
