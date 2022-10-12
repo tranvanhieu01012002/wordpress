@@ -1,5 +1,6 @@
 <?php
 add_theme_support( 'post-thumbnails' );
+include('wp-content\themes\twentytwentytwo-child\custom\function\display-api.php');
 function get_day_of_week_VN()
 {
     $day = date('w');

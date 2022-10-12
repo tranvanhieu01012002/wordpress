@@ -16,5 +16,10 @@
     endwhile;
     wp_reset_postdata();
     ?>
+    <?php
+    $request = wp_remote_get('https://61bc10c1d8542f0017824531.mockapi.io/films');
+    $data = json_decode( wp_remote_retrieve_body( $request ) );
+    display_api($data);
+    ?>
     </div>
 </ul>
