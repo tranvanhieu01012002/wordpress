@@ -14,4 +14,10 @@ get_header();
         get_template_part('./display/post/right-post')
         ?>
     </div>
+    <div class="container-film">
+        <?php
+            
+        
+        ?>
+    </div>
 </main>

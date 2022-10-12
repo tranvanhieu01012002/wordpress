@@ -94,3 +94,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
+
+// define API for mock
+
+define('API','https://61bc10c1d8542f0017824531.mockapi.io/films');
