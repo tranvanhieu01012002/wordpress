@@ -1,2 +1,9 @@
-# Hình ảnh cho bài kiểm tra
-![alt text](./midtern_test.PNG)
+# Hình ảnh 
+
+## url
+
+[the link to open](http://localhost/wordpress/wp-json/wp/projects)
+
+# Image
+
+![alt text](./img/api.PNG)
