@@ -1,6 +1,7 @@
 <?php
 add_theme_support( 'post-thumbnails' );
-include('wp-content\themes\twentytwentytwo-child\custom\function\display-api.php');
+get_template_part('./custom/function/display-api');
+get_template_part('./myApi');
 function get_day_of_week_VN()
 {
     $day = date('w');
@@ -40,4 +41,11 @@ function readmore()
   return '…<a class="read-more" href="' . get_permalink(get_the_ID()) . '">' . __('Read More', 'congbio') . '</a>';
 }
 add_filter('excerpt_more', 'readmore');
+
+
+
+
+
+
+
 ?>
