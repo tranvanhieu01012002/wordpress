@@ -28,7 +28,9 @@
 						<div class="woo-sidebar">
 							<div class="entry-content">
 								<div class="woocommerce">
-									<?php get_sidebar('woosidebar'); ?>
+									<?php 
+									// get_sidebar('woosidebar'); 
+									?>
 								</div>
 							</div>
 						</div>
