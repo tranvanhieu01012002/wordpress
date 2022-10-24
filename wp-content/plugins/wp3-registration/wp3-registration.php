@@ -160,17 +160,15 @@ function custom_registration_function() {
         $bio
         );
     }
- 
     registration_form(
-        $username,
-        $password,
-        $confirm_pass,
-        $email,
-       
-        $first_name,
-        $last_name,
-        $nickname,
-        $bio
+        $username??"",
+        $password??"",
+        $confirm_pass??"",
+        $email??"",
+        $first_name??"",
+        $last_name??"",
+        $nickname??"",
+        $bio??""
         );
 }
 
