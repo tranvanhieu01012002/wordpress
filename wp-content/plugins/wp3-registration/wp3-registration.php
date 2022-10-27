@@ -67,6 +67,7 @@ function registration_form( $username, $password,$confirm_pass, $email, $first_n
     <input type="submit" name="submit" value="Register"/>
     </form>
     ';
+    // wp3_send_mail();
 }
 
 
