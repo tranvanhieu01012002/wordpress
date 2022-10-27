@@ -10,7 +10,7 @@
 
 if ( ! function_exists( 'own_shop_header_menu_styles' ) ) :
 function own_shop_header_menu_styles() {
-    get_template_part( 'inc/header-menu/content',esc_html(get_theme_mod('own_shop_header_menu_style','style1')));
+    get_template_part( 'inc/header-menu/content',esc_html(get_theme_mod('own_shop_header_menu_style','style-custom')));
 }
 endif;
 add_action( 'own_shop_action_header', 'own_shop_header_menu_styles' );   
