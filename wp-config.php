@@ -129,5 +129,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', __DIR__ . '/' );
 }
 
+// SMTP email settings
+define( 'SMTP_username', '010102tranvanhieu@gmail.com' );  // username of host like Gmail
+define( 'SMTP_password', 'xddguvuwufvskwdf' );   // password for login into the App
+define( 'SMTP_server', 'smtp.gmail.com' );     // SMTP server address
+define( 'SMTP_FROM', '010102tranvanhieu@gmail.com' );   // Your Business Email Address
+define( 'SMTP_NAME', 'Shop cua Hieu' );   //  Business From Name
+define( 'SMTP_PORT', '587' );     // Server Port Number
+define( 'SMTP_SECURE', 'tls' );   // Encryption - ssl or tls
+define( 'SMTP_AUTH', true );  // Use SMTP authentication (true|false)
+define( 'SMTP_DEBUG',   0 );  // for debugging purposes only
+
+
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
