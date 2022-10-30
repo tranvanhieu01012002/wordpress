@@ -10,7 +10,7 @@
 /**
  *  Defining Constants
  */
-
+include('wp-content/themes/own-shop-wp3/inc/information/content.php');
 // Core Constants
 define('OWN_SHOP_REQUIRED_PHP_VERSION', '5.6' );
 define('OWN_SHOP_DIR_PATH', get_template_directory());
@@ -553,10 +553,13 @@ function woocommerce_content(){
 		<?php endif; ?>
 
 		<?php do_action( 'woocommerce_archive_description' ); ?>
-
+		<?php 
+		render_information()
+		?>
 		<?php if ( woocommerce_product_loop() ) : 
 			show_all();
 			show_category();
+			// show_category();
 		else :
 			do_action( 'woocommerce_no_products_found' );
 		endif;
