@@ -562,8 +562,8 @@ function woocommerce_content(){
 		endif;
 	}
 }
-// add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );	
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );	
 $args = array(
 	'default-image' => 'https://png.pngtree.com/thumb_back/fh260/background/20210826/pngtree-wood-texture-white-wood-texture-background-image_769768.jpg',
 );
-// add_theme_support( 'custom-background', $args );
+add_theme_support( 'custom-background', $args );

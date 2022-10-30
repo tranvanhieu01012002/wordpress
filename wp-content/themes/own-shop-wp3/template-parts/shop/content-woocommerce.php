@@ -42,6 +42,7 @@
 						<div class="entry-content">
 							<div class="woocommerce">
 								<?php
+								// code woocommerce here
 									woocommerce_content();						
 								?>
 							</div>					

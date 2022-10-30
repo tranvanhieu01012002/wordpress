@@ -8,12 +8,7 @@
  */
 
 ?>
-<style>
-	.wp3-ac{
-		background-color: '#000';
-		height: 200px;
-	}
-</style>
+
 <?php
 	$page_val = is_front_page() ? 'home' : 'page' ;
 ?>
@@ -144,13 +139,12 @@
         *
         * @hooked own_shop_header_inner_content - 10
         */
+
+
         do_action( 'own_shop_action_header_inner_content' );
     ?>
 </header>
 <div class="clearfix"></div>
-
-<div class="wp3-ac">e 
-dsfgsdfgdsfgdfgdfgdfg
-</div>
+								
 <div class="clearfix"></div>
 <div id="content" class="elementor-menu-anchor"></div>
