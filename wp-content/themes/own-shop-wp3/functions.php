@@ -554,10 +554,12 @@ function woocommerce_content(){
 
 		<?php do_action( 'woocommerce_archive_description' ); ?>
 		<?php 
+		// show information 	
 		render_information()
 		?>
 		<?php if ( woocommerce_product_loop() ) : 
-			show_all();
+			// show_all();
+			do_action('show_all');
 			show_category();
 			// show_category();
 		else :
