@@ -8,18 +8,11 @@
   Author URI: http://tech4sky.com
  */
 
-// add_action( 'phpmailer_init', 'my_phpmailer_smtp' );
-// function my_phpmailer_smtp( $phpmailer ) {
-//     $phpmailer->isSMTP();     
-//     $phpmailer->Host = SMTP_server;  
-//     $phpmailer->SMTPAuth = SMTP_AUTH;
-//     $phpmailer->Port = SMTP_PORT;
-//     $phpmailer->Username = SMTP_username;
-//     $phpmailer->Password = SMTP_password;
-//     $phpmailer->SMTPSecure = SMTP_SECURE;
-//     $phpmailer->From = SMTP_FROM;
-//     $phpmailer->FromName = SMTP_NAME;
-// }
+
+// Require file
+
+require_once plugin_dir_path( __FILE__ ) . '/send-mail.php';
+require_once plugin_dir_path( __FILE__ ) . '/w3-config-php-mailer.php';
 
 function registration_form( $username, $password,$confirm_pass, $email, $first_name, $last_name, $nickname, $bio ) {
     echo '
@@ -78,6 +71,7 @@ function registration_form( $username, $password,$confirm_pass, $email, $first_n
     <input type="submit" name="submit" value="Register"/>
     </form>
     ';
+    // wp3_send_mail();
 }
 
 
@@ -134,8 +128,19 @@ function complete_registration() {
         'nickname'      =>   $nickname,
         'description'   =>   $bio,
         );
-        wp_insert_user( $userdata );
-        // wp_mail("hieu.tran23@student.passerellesnumeriques.org", "Subject", "Message");
+        // wp_insert_user( $userdata );
+        $admin_mail='010102tranvanhieu@gmail.com';
+        $subject = "Thank you for your register";
+        $headers = 'From: '. $admin_mail . "\r\n" .
+                    'Reply-To: ' . $admin_mail . "\r\n";
+        $message="hjhihi";      
+        $sent = wp_mail($email, $subject, strip_tags($message), $headers);
+             if($sent) {
+                 echo 'success';
+             }//message sent!
+             else  {
+                 echo 'fail';
+             }//message wasn't sent
         echo 'Registration complete. Goto <a href="' . get_site_url() . '/wp-login.php">login page</a>.';   
     }
 }
