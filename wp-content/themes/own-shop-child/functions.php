@@ -505,7 +505,7 @@ function mytheme_add_woocommerce_support() {
 // Show all product
 
 function show_all(){
-	do_action( 'woocommerce_before_shop_loop' );
+	do_action( 'woocommerce_before_shop_loop','Tất cả các sản phẩm của cửa hàng' );
 	woocommerce_product_loop_start();
 	if ( wc_get_loop_prop( 'total' ) ) : 
 		while ( have_posts() ) : 
@@ -518,8 +518,8 @@ function show_all(){
 }
 function show_category(){
 	$args = array(
-        'post_type' => 'product',
-        'posts_per_page' => 1
+        'product_c' => 'may khoan',
+        'posts_per_page' => 3
         );
 	$loop = new WP_Query( $args );
 	if ( $loop->have_posts() ) {
@@ -563,8 +563,14 @@ function woocommerce_content(){
 	}
 }
 add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );	
+add_action('woocommerce_before_shop_loop','show_title_listing');
 $args = array(
 	'default-color' => '000000',
 	'default-image' => 'https://png.pngtree.com/thumb_back/fh260/background/20210826/pngtree-wood-texture-white-wood-texture-background-image_769768.jpg',
 );
 add_theme_support( 'custom-background', $args );
+
+// Custom name for show
+function show_title_listing($title){
+	echo "<h1>".$title."</h1>";
+}
