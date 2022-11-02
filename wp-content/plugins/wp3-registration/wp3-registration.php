@@ -11,7 +11,7 @@
 
 // Require file
 
-require_once plugin_dir_path( __FILE__ ) . '/send-mail.php';
+require_once plugin_dir_path( __FILE__ ) . '/mail-message.php';
 require_once plugin_dir_path( __FILE__ ) . '/w3-config-php-mailer.php';
 
 function registration_form( $username, $password,$confirm_pass, $email, $first_name, $last_name, $nickname, $bio ) {
@@ -71,7 +71,6 @@ function registration_form( $username, $password,$confirm_pass, $email, $first_n
     <input type="submit" name="submit" value="Register"/>
     </form>
     ';
-    // wp3_send_mail();
 }
 
 
@@ -128,12 +127,12 @@ function complete_registration() {
         'nickname'      =>   $nickname,
         'description'   =>   $bio,
         );
-        // wp_insert_user( $userdata );
+        wp_insert_user( $userdata );
         $admin_mail='010102tranvanhieu@gmail.com';
         $subject = "Thank you for your register";
         $headers = 'From: '. $admin_mail . "\r\n" .
                     'Reply-To: ' . $admin_mail . "\r\n";
-        $message="hjhihi";      
+        $message=mail_message_register($username,$password);      
         $sent = wp_mail($email, $subject, strip_tags($message), $headers);
              if($sent) {
                  echo 'success';
