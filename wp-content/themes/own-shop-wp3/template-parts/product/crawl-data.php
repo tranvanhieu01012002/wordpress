@@ -7,7 +7,7 @@ class crawlData{
         
         // var_dump($result)   ;
         foreach ($result as $post){
-        echo  '<img src='.$post->image.'/>';
+        echo  '<img src="'.$post->image.'" />';
     }
     }
 
