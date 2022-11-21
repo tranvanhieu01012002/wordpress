@@ -535,9 +535,6 @@ function woocommerce_content(){
 			$show = new showProduct();
 			$show->index();
 			$show->show_category();
-
-			$customShow = new crawlData();
-			$customShow->index();
 		
 		else :
 			do_action( 'woocommerce_no_products_found' );
